@@ -1,0 +1,147 @@
+{
+  "info": {
+    "name": "API Sistem Karyawan",
+    "_postman_id": "a3e1e1bb-7d44-4f92-a4e4-90d378f8c3bf",
+    "description": "Dokumentasi API Sistem Manajemen Karyawan",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"admin123\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{base_url}}/auth/login"
+          },
+          "response": []
+        },
+        {
+          "name": "Register (Admin Only)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}", "type": "text" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"user2\",\n  \"password\": \"user123\",\n  \"nama_lengkap\": \"User Kedua\",\n  \"role\": \"user\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{base_url}}/auth/register"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Profile",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}", "type": "text" }
+            ],
+            "url": "{{base_url}}/auth/profile"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Karyawan",
+      "item": [
+        {
+          "name": "Get All Karyawan",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}", "type": "text" }
+            ],
+            "url": "{{base_url}}/karyawan"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Karyawan by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}", "type": "text" }
+            ],
+            "url": "{{base_url}}/karyawan/{{id_karyawan}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Karyawan (Admin Only)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}", "type": "text" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nama\": \"Budi\",\n  \"jabatan\": \"Staff\",\n  \"gaji\": 5000000,\n  \"tanggal_masuk\": \"2024-01-10\"\n}"
+            },
+            "url": "{{base_url}}/karyawan"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Karyawan (Admin Only)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}", "type": "text" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nama\": \"Budi Update\",\n  \"jabatan\": \"Supervisor\",\n  \"gaji\": 6500000,\n  \"tanggal_masuk\": \"2024-01-10\"\n}"
+            },
+            "url": "{{base_url}}/karyawan/{{id_karyawan}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Karyawan (Admin Only)",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}", "type": "text" }
+            ],
+            "url": "{{base_url}}/karyawan/{{id_karyawan}}"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Dashboard",
+      "item": [
+        {
+          "name": "Get Stats Dashboard",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}", "type": "text" }
+            ],
+            "url": "{{base_url}}/dashboard/stats"
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:5000/api" },
+    { "key": "token", "value": "" },
+    { "key": "id_karyawan", "value": "1" }
+  ]
+}
