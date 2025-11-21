@@ -1,4 +1,5 @@
-# Aplikasi Sistem Manajemen Karyawan adalah aplikasi berbasis Node.js (Express) dan React.js (Vite) 
+# Aplikasi Sistem Manajemen Karyawan 
+## Techstack :  Node.js (Express) dan React.js (Vite) 
 
 #### 🔐 Login Admin & User (JWT Authentication)
 
