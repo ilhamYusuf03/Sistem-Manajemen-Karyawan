@@ -49,6 +49,7 @@ Total karyawan-Total gaji-Rata-rata gaji-Jumlah per jabatan
 
 
 ⚙️ Cara Instalasi & Menjalankan
+
 📥 1. Clone Repository
 git clone https://github.com/username/Sistem_Karyawan.git
 cd Sistem_Karyawan
