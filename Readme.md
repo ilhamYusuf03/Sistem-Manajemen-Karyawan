@@ -76,10 +76,15 @@ install semua dependesi
 ### Buat file .env:
 
 PORT=5000
+
 JWT_SECRET=rahasia123
+
 DB_HOST=localhost
+
 DB_USER=root
+
 DB_PASS=
+
 DB_NAME=sistem_karyawan
 
 ### Jalankan server: npm run dev
