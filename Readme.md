@@ -80,29 +80,7 @@ Penyimpanan password terenkripsi (bcrypt)
 
 🧵 Context API (AuthContext)
 
-📁 Struktur Project
-Sistem_Karyawan/
-│
-├── backend/
-│   ├── Config/
-│   ├── Controllers/
-│   ├── Models/
-│   ├── Middlewares/
-│   ├── Routes/
-│   ├── utils/
-│   ├── server.js
-│   └── .env
-│
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   ├── index.html
-│   └── vite.config.js
-│
-└── docs/
-    ├── API_Dokumentasi.md
-    ├── Postman_Collection.json
-    └── ERD.png (opsional)
+
 
 ⚙️ Cara Instalasi & Menjalankan
 📥 1. Clone Repository
